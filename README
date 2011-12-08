@@ -1,0 +1,3 @@
+It is simple calendar application written using Backbone.js
+Within this application you can create, edit or remove events bound to selected date.
+Events are stored at the browser's local storage.
