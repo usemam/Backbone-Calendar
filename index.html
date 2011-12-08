@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calendar</title>
+
+    <link type="text/css" rel="stylesheet" href="Content/jquery-ui-1.8.16.custom.css" />
+    <link type="text/css" rel="stylesheet" href="Content/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="Content/calendar.css" />
+
+    <script type="text/javascript" src="Scripts/json2.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="Scripts/underscore.js"></script>
+    <script type="text/javascript" src="Scripts/backbone.js"></script>
+    <script type="text/javascript" src="Scripts/date.js"></script>
+    <script type="text/javascript" src="Scripts/backbone-localstorage.js"></script>
+    <script type="text/javascript" src="Scripts/calendar.js"></script>
+</head>
+<body>
+    <div id="calendarApp" class="container">
+        <div id="datepicker"></div>
+
+        <div id="newEvent">
+            <h3>Create new event</h3>
+            <hr/>
+            <fieldset>
+                <div class="clearfix">
+                    <label>Start (time):</label>
+                    <div class="input">
+                        <input id="startTime" class="small" type="text" />
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label>Description:</label>
+                    <div class="input">
+                        <textarea id="eventDescription" class="medium"></textarea>
+                    </div>
+                </div>
+                <div class="actions">
+                    <input id="createBtn" type="button" class="btn primary" value="Create" />
+                    <input id="cancelBtn" type="button" class="btn" value="Cancel" />
+                </div>
+            </fieldset>
+        </div>
+
+        <table id="eventList"></table>
+
+        <div class="row">
+            <div class="span6">&nbsp;</div>
+            <div class="span4">
+                <input type="button" class="btn primary large" value="Create new" />
+            </div>
+            <div class="span6">&nbsp;</div>
+        </div>
+    </div>
+
+    <script id="item-template" type="text/template">
+        <td class="time">
+            <div class="display"><%= time %></div>
+            <div class="edit">
+                <input type="text" class="small time-input" />
+            </div>
+        </td>
+        <td class="description">
+            <div class="display"><%= text %></div>
+            <div class="edit">
+                <input type="text" class="large text-input" />
+            </div>
+        </td>
+        <td><span class="ui-icon ui-icon-trash remove-event" title="Remove event"></span></td>
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿div#datepicker
+{
+    padding-left: 36%;
+    margin-bottom: 18px;
+}
+div#newEvent
+{
+    display: none;
+}
+#newEvent .clearfix
+{
+    margin-bottom: 18px;
+}
+.remove-event
+{
+    cursor: pointer;
+}
+.time
+{
+    width: 100px;
+}
+.description
+{
+    width: 80%;
+}
+#eventList .edit
+{
+    display: none;
+}
+#eventList .editing .edit
+{
+    display: block;
+}
+#eventList .display
+{
+    display: block;
+}
+#eventList .editing .display
+{
+    display: none;
+}
+.error
+{
+    border-color: red;
+    color: red;
+}
